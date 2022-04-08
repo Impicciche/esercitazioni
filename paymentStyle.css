@@ -1,0 +1,78 @@
+.main {
+  background-color: #161623;
+}
+.menu {
+  line-height: 25px;
+  padding-right: 30px !important;
+}
+.lucchetto {
+  object-fit: cover;
+  background-image: url(./lucchetto.png);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 10px;
+  position: relative;
+  top: -7px;
+  align-content: center;
+}
+h6 {
+  font-size: smaller;
+  color: rgb(31, 139, 31);
+}
+.smart {
+  color: white;
+  font-size: larger;
+}
+img {
+  width: 100%;
+  align-content: center;
+  background-image: none;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(238, 234, 234);
+}
+.sign {
+  border-radius: 20px;
+  height: 30px;
+  width: 140px;
+  align-self: center;
+  text-align: center;
+  padding-bottom: 28px !important;
+  border-color: bisque;
+  color: bisque;
+}
+.main-link {
+  padding-right: 15px;
+}
+.header {
+  color: rgb(206, 200, 194);
+}
+
+.get {
+  border-radius: 20px;
+  height: 30px;
+  width: 140px;
+  align-self: center;
+  text-align: center;
+  padding-bottom: 28px !important;
+  border-color: bisque;
+  color: bisque;
+}
+.get,
+.sign:hover {
+  background-color: blue;
+  color: white;
+  font-size: large;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  transition: all 0.3 ease-in-out;
+}
+
+.sign,
+.get:hover {
+  border: 1px solid bisque;
+  background-color: transparent;
+  color: bisque;
+}

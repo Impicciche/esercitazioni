@@ -1,60 +1,62 @@
-body{
-    background-color: #e4c7a5;
-    color: #033b4a;
+body {
+  background-color: #e4c7a5;
+  color: #033b4a;
 }
-.gorilla-img{
-    width: 100%;
+.gorilla-img {
+  width: 100%;
 }
-.logo{
-    border: 1px solid #033b4a;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    text-align: center;
+.logo {
+  border: 1px solid #033b4a;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
 }
-nav{
-    padding: 30px 0px;
+nav {
+  padding: 30px 0px;
 }
 nav a {
-    color: #033b4a;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;
+  color: #033b4a;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
 
-    position: relative;
+  position: relative;
 }
 nav a::before {
-    content: " ";
-    height: 2px;
-    width: 0px;
-    background-color: #033b4a;
-    position: absolute;
-    bottom: -2px;
-    left:0;
-    transition: width 0.3s ease-in-out;
-    display: block;
+  content: " ";
+  height: 2px;
+  width: 0px;
+  background-color: #033b4a;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  display: block;
 }
 
 nav a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 nav a:hover {
-    color: #033b4a;
+  color: #033b4a;
 }
 
-.btn, .btn.outline:hover{
-    background-color: #6b0e7c;
-    color: #e7d0eb;
-    padding: 8px 15px;
-    border: 1px solid transparent;
-    transition: all 0.3 ease-in-out;
+.btn,
+.btn.outline:hover {
+  background-color: #6b0e7c;
+  color: #e7d0eb;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  transition: all 0.3 ease-in-out;
 }
-.btn:hover, .btn.outline{
-    border: 1px solid #6b0e7c;
-    color: #6b0e7c;
-    background-color: transparent;
+.btn:hover,
+.btn.outline {
+  border: 1px solid #6b0e7c;
+  color: #6b0e7c;
+  background-color: transparent;
 }
 
-.menu{
-    line-height: 42px;
+.menu {
+  line-height: 42px;
 }
