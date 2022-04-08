@@ -1,7 +1,105 @@
-h1 {
-  font-size: 22px;
+body{
+  background-color: rgb(227, 227, 227);
+  color: #06143d;
 }
 
-section h1 {
-  color: red;
+a{
+  color: #06143d;
+  text-decoration: none;
 }
+a:hover{
+  color: #06143d;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img{
+  margin-right: 10px;  
+}
+nav{
+  padding: 25px 0;
+}
+
+nav .menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav .menu li {
+  margin-right: 25px;
+}
+.btn-container .button{
+  margin-right: 15px;
+}
+
+
+.btn-container .button:last-of-type{
+  margin-right: 0;
+}
+.button{
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #4767ff;
+  color: #FFF;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+.button:hover{
+  background-color: transparent;
+  border: 2px solid #4767ff;
+  color: #4767ff
+}
+.button.transparent{
+  background-color: transparent;
+  color: #06143d;
+}
+
+.button.outline{
+  background-color: transparent;
+  border: 2px solid #4767ff;
+  color: #4767ff;
+  transition: all 0.3s ease-in-out; 
+}
+
+.button.outline:hover{
+  background-color: #4767ff;
+  border: 2px solid transparent;
+  color: #FFF;
+}
+
+header section img{
+  width: 100%;
+}
+
+header h1 {
+  font-size: 54px;
+  margin-bottom: 30px;
+}
+
+header .btn-container{
+  margin-bottom: 65px;
+}
+
+nav .btn-container{
+  margin-bottom: 0;
+}
+
+header .list-description{
+  list-style: circle;
+}
+
+header{
+  margin-bottom: 35px;
+}
+main h2{
+  margin-bottom: 30px;
+}
+
+main img {
+  width: 100%;
+}
+
