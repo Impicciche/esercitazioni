@@ -1,0 +1,32 @@
+{
+  "classe": "2b",
+  "scuola": "elementare",
+  "insegnanti": [
+    {
+      "nome": "Lucia",
+      "cognome": "Della Vespa",
+      "materie": ["Geografia", "Italiano"]
+    },
+
+    {
+      "nome": "Anna",
+      "cognome": "Verdi",
+      "materie": ["Geometria", "Matematica"]
+    }
+  ],
+  "alunni": [
+    {
+      "nome": "Marco",
+      "cognome": "Gallo"
+    },
+
+    {
+      "nome": "Marco",
+      "cognome": "Gallo"
+    },
+    {
+      "nome": "Luca",
+      "cognome": "Rossi"
+    }
+  ]
+}

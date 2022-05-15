@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class persona {
+        constructor(nome, cognome, interessi, eta) {
+          this.nome = nome;
+          this.cognome = cognome;
+          this.interessi = interessi;
+          this.eta = eta;
+        }
+      }
+
+      class insegnante extends persona {
+        constructor(nome, cognome, interessi, eta, materia) {
+          super(nome, cognome, interessi, eta);
+          this.materia = materia;
+        }
+        get() {
+          return this._materia;
+        }
+        set(nuovaMateria) {
+          this._materia = nuovaMateria;
+        }
+      }
+
+      const Insegnante = new insegnante(
+        "Alice",
+        "Gallo",
+        ["cantare", "cucinare"],
+        "25",
+        "Storia"
+      );
+      console.log(Insegnante.materia);
+    </script>
+  </body>
+</html>

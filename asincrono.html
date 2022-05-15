@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>bottone</button>
+    <p id="demo"></p>
+    <script>
+       /*
+       let prova = setTimeout(saluta, 5000);
+       function saluta() {
+         alert("sono in timeout");
+       }
+       const btn = document.querySelector("button");
+       btn.addEventListener("click", () => {
+         clearTimeout(prova);
+       });
+
+
+       fetch("./classe.json")
+         .then(function (response) {
+           return response.json();
+         })
+         .then(function (json) {
+           let classe = json;
+           console.log("dati", classe);
+         });
+        .catch(function()
+        {
+
+        });
+        */
+      function displayTime()
+      {
+        let date=new date;
+        let time=toLocaleTimeString();
+        document.getElementById("demo")=time;
+
+      }
+      const createClock=setInterval(displayTime,1000);
+    </script>
+  </body>
+</html>

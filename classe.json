@@ -1,0 +1,31 @@
+{
+  "classe": "3A",
+  "scuola": "elementare",
+  "insegnanti": [
+    {
+      "nome": "Lucia",
+      "cognome": "Rossi",
+      "materia": ["Italiano", "Geografia", "Storia"]
+    },
+
+    {
+      "nome": "Anna",
+      "cognome": "Verdi",
+      "materia": ["MAtematica", "Geometria"]
+    }
+  ],
+  "alunni": [
+    {
+      "nome": "Marco",
+      "cognome": "Callop"
+    },
+    {
+      "nome": "Adele",
+      "cognome": "Piazza"
+    },
+    {
+      "nome": "Gino",
+      "cognome": "Gallo"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        border-radius: 25px;
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 50px;
+      }
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="numero" placeholder="inserisci numero" />
+    <button>Calcola moltiplicazione</button>
+    <h1>Numero inserito</h1>
+    <script>
+      let numero = document.querySelector("input");
+      let invia = document.querySelector("button");
+      let title = document.querySelector("h1");
+
+      function moltiplicazione(number) {
+        let risultato = number * number;
+        console.log(risultato);
+      }
+      invia.addEventListener("click", () => {
+        moltiplicazione(numero.value);
+      });
+
+      class persona {
+        constructor(nome, cognome, interesse, eta) {
+          this.nome = nome;
+          this.cognome = cognome;
+          this.interesse = interesse;
+          this.eta = eta;
+        }
+      }
+      class Insegnante extends persona {
+        constructor(nome, cognome, interesse, eta, materia) {
+          super(nome, cognome, interesse, eta);
+          this.materia = materia;
+        }
+        get() {
+          return this._materia;
+        }
+        set(nuovaMateria) {
+          this._materia = nuovaMateria;
+        }
+        valutazione(alunno) {
+          console.log(
+            `Devi stare piu attento ${alunno} devi essere piu concentrato in classe`
+          );
+        }
+      }
+      const insegnante = new Insegnante(
+        "Anna",
+        "Rossi",
+        ["leggere", "cucinare"],
+        25,
+        "Geografia"
+      );
+      insegnante.valutazione("Luca");
+      console.log(insegnante);
+      insegnante.materia = "Storia";
+      console.log(insegnante.materia);
+      insegnante.valutazione("Gino");
+
+      let requestURL = "./classe2.json";
+      let request = new XMLHttpRequest();
+      request.open("GET", requestURL);
+      request.responseType = "json";
+      request.send();
+
+      request.onload = function () {
+        const classe = request.response;
+        console.log(classe);
+      };
+
+      fetch("classe.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (json) {
+          classe = json;
+          console.log("Dati: ", classe);
+        });
+    </script>
+  </body>
+</html>
