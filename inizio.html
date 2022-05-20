@@ -74,9 +74,9 @@
       console.log(insegnante.materia);
       insegnante.valutazione("Gino");
 
-      let requestURL = "./classe2.json";
+      let requestUrl = "classe.json";
       let request = new XMLHttpRequest();
-      request.open("GET", requestURL);
+      request.open("GET", requestUrl);
       request.responseType = "json";
       request.send();
 
@@ -91,7 +91,10 @@
         })
         .then(function (json) {
           classe = json;
-          console.log("Dati: ", classe);
+          console.log("Dati", classe);
+        })
+        .catch(function (err) {
+          console.log("errore  " + err.message);
         });
     </script>
   </body>

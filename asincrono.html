@@ -7,41 +7,43 @@
     <title>Document</title>
   </head>
   <body>
-    <button>bottone</button>
-    <p id="demo"></p>
+    <button>Prova</button>
+    <p id="testo"></p>
     <script>
-       /*
-       let prova = setTimeout(saluta, 5000);
-       function saluta() {
-         alert("sono in timeout");
-       }
-       const btn = document.querySelector("button");
-       btn.addEventListener("click", () => {
-         clearTimeout(prova);
-       });
+      /*  let data = setTimeout(saluta, 500);
 
+             function saluta() {
+               alert("Ecco un'alerta");
+             }
+             */
 
-       fetch("./classe.json")
-         .then(function (response) {
-           return response.json();
-         })
-         .then(function (json) {
-           let classe = json;
-           console.log("dati", classe);
-         });
-        .catch(function()
-        {
+      /*
+            const btn = document.querySelector("button");
 
+            btn.addEventListener("click", () => {
+              clearInterval(clock);
+            });
+
+            function orario() {
+              let data = new Date();
+              let tempo = data.toLocaleTimeString();
+              document.getElementById("testo").textContent = tempo;
+            }
+            const clock = setInterval(orario, 1000);
+            */
+
+      fetch("cane.png")
+        .then((response) => {
+          return response.blob();
+        })
+
+        .then((creaImagine) => {
+          let oggettoURL = URL.createObjectURL(creaImagine);
+          let k = document.createElement("img");
+
+          img.src = oggettoURL;
+          document.body.appenchild(k);
         });
-        */
-      function displayTime()
-      {
-        let date=new date;
-        let time=toLocaleTimeString();
-        document.getElementById("demo")=time;
-
-      }
-      const createClock=setInterval(displayTime,1000);
     </script>
   </body>
 </html>
