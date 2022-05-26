@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tabella{
+            border: 1px solid #000;
+
+        }
+
+        .tabella td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="riceviDati" type="submit">Ricevi dati</button>
+    <div id="contenitoreTabella">
+
+    </div>
+
+    <script>
+        
+        
+        //seleziono il pulsante Ricevi dati
+        const bottoneRicevi = document.querySelector("#riceviDati");
+        
+        // resto in ascolto quando il bottone è cliccato
+        bottoneRicevi.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            
+            //preparo la richiesta http
+            const server = new XMLHttpRequest();
+            //verso il sito di esempio che contiene i dati da scaricare
+            server.open("GET","https://jsonplaceholder.typicode.com/posts");
+            //invio i richiesta 
+            server.send();
+            
+            //sto in ascolto finche ricevo i dati
+            server.onreadystatechange = (data) => {
+                //se lo stato dei dati ricevuti non contiene errori 
+                if(data.target.readyState == 4){
+                    //converto la stringa ricevuta per essere trattata come oggetto 
+                    const rispostaServer = JSON.parse(data.target.response);
+
+                    //seleziono il contenitore che conterra la tabella creata con JS
+                    const contenitore = document.querySelector("#contenitoreTabella");
+                    
+                    //creo dinamicamente una tabella che conterra i dati ricevuti
+                    const tabella = document.createElement("table");
+
+                    //creo intestazione tabella per dare dei nomi alle colonne
+                    const intestazione = document.createElement("tr");
+
+                    //creo le differenti colonne
+                    const userId = document.createElement("th");
+                    const id = document.createElement("th");
+                    const title = document.createElement("th");
+                    const body = document.createElement("th");
+
+                    //inserisco il testo nelle colonne
+                    userId.textContent = "User Id";
+                    id.textContent = "Id";
+                    title.textContent = "Title";
+                    body.textContent = "Body";
+
+                    //aggiungo le colonne alla riga intestazione
+
+                    intestazione.append(userId);
+                    intestazione.append(id);
+                    intestazione.append(title);
+                    intestazione.append(body);
+
+                    //aggiungo la riga intestazione alla tabella
+                    tabella.append(intestazione);
+
+                    
+                    //scanziono i dati linea per linea (rispostaServer contiene un insieme di oggetti da scanzionare)
+                    for(let riga of rispostaServer){
+                        //creo una nuova linea di tabella che conterra le differenti colonne
+                        //per separare i dati 
+                        const rigaTabella = document.createElement("tr");
+
+                        //creo le varie colonne che conterranno i dati ricevuti
+                        const userId = document.createElement("td");
+                        const id = document.createElement("td");
+                        const title = document.createElement("td");
+                        const body = document.createElement("td");
+
+                        //aggiungo i dati ricevuti alle colonne appena create
+                        userId.textContent = riga.userId
+                        id.textContent = riga.id
+                        title.textContent = riga.title
+                        body.textContent = riga.body
+
+                        //aggiungo le colonne alle righe
+                        rigaTabella.append(userId);
+                        rigaTabella.append(id);
+                        rigaTabella.append(title);
+                        rigaTabella.append(body);
+
+                        //aggiungo la riga alla tabella
+                        tabella.append(rigaTabella);
+                    }
+
+                    //aggiungo una classe css chiamata tabella per poter assegnare
+                    //successivamente dello stile alla tabella
+                    tabella.classList = "tabella";
+                    
+                    //aggiungo la tabella al contenitore nella pagina
+                    contenitore.append(tabella);
+
+                }
+            };
+            
+        });
+
+
+    </script>
+</body>
+</html>
