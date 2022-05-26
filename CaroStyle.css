@@ -1,3 +1,114 @@
+.logo {
+  color: rgb(235, 91, 39);
+  padding-left: 106px;
+}
 .lien-menu {
-  margin-right: 0px;
+  margin-left: 80%;
+  align-items: center !important;
+  position: relative;
+  right: 41%;
+}
+.menu {
+  display: flex;
+  padding-top: 20px;
+}
+img {
+  width: 382px;
+  height: 404px;
+  object-fit: cover;
+}
+h3 {
+  padding-top: 10%;
+  color: rgb(235, 91, 39);
+}
+p {
+  padding-top: 2%;
+  font-weight: bolder;
+  color: #746f6f;
+}
+
+.classeur {
+  background-color: #bbbbbb;
+}
+
+.btn-cuisine {
+  font-size: smaller;
+  border-radius: 42%;
+  border-style: double;
+  padding: 2%;
+  margin-right: 2%;
+  font-weight: bold;
+  color: rgb(235, 91, 39);
+  background-color: transparent;
+  border-color: #746f6f;
+}
+
+.btn-resto {
+  font-size: smaller;
+  border-radius: 42%;
+  border-style: double;
+  padding: 2%;
+  font-weight: bold;
+  color: rgb(235, 91, 39);
+  background-color: transparent;
+  border-color: #746f6f;
+}
+h3 {
+  padding-top: 8%;
+  padding-bottom: 6%;
+  text-align: center;
+}
+.inscription {
+  display: flex;
+  position: relative;
+  top: -24px;
+  left: 236px;
+}
+.lock {
+  height: 24px;
+  width: 53px;
+}
+.alternatif {
+  padding: 10px;
+}
+a {
+  text-decoration-line: none;
+  color: rgb(235, 91, 39);
+}
+a:hover {
+  color: #746f6f;
+}
+h4 {
+  color: rgb(235, 91, 39);
+}
+.footer {
+  background-color: #bbbbbb;
+}
+label {
+  color: #746f6f;
+}
+
+.btn-inscription {
+  color: #746f6f;
+  margin-bottom: 2%;
+}
+.btn-cuisine:hover {
+  color: rgb(235, 91, 39);
+  background-color: white;
+  border-color: rgb(235, 91, 39);
+}
+.btn-resto:hover {
+  content: " ";
+  color: rgb(235, 91, 39);
+  background-color: white;
+  border-color: rgb(235, 91, 39);
+}
+
+.design {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  position: relative;
+  left: 1065px;
+  top: -81px;
 }
