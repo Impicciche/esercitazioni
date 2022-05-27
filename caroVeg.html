@@ -43,99 +43,131 @@
             </div>
         </div>
     </nav>
-<div class="header">
-    <div class="container">
-        <div class="row classeur">
-            
-<div class="col-6">
-    <h3>Débutez tout en douceur avec des différents nutriments. </h3>
-        
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Impedit vel autem perspiciatis cumque ipsa. Eos culpa non, delectus consequuntur vel placeat 
-    temporibus aspernatur asperiores laboriosam vero soluta 
-    molestias repellendus sint?</p>
-            <div class="button-cuisine prova">
-                <button class="btn-cuisine">coté cuisine</button>
-                <button class="btn-resto">coté resto</button>                
+    <div class="header">
+        <div class="container">
+            <div class="row classeur">
+                <div class="col-6">
+                    <h3>Débutez tout en douceur avec des différents nutriments. </h3>
+                        
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Impedit vel autem perspiciatis cumque ipsa. Eos culpa non, delectus consequuntur vel placeat 
+                        temporibus aspernatur asperiores laboriosam vero soluta 
+                        molestias repellendus sint?
+                    </p>
+                    <div class="button-cuisine prova">
+                        <button class="link-btn me-2">coté cuisine</button>
+                        <button class="link-btn">coté resto</button>                
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="./houmous.jpeg" alt="">
+                </div>        
+        </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <h3>Les plats au Top</h3>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <a href="" class="alternatif" style="background-image: url(./burger.jpeg)">
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="" class="alternatif" style="background-image: url(./dessert.png)">
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="" class="alternatif" style="background-image: url(./salade.jpg)">
+                    </a>
+                </div>
             </div>
-</div>
-<div class="col-6">
-<img src="./houmous.jpeg" alt=""></div>        
-</div>
-    </div>
-    <h3>Les plats au Top</h3>
-    <div class="container">
-        <div class="row justify-content-center">
-        <div class="col-4"><a href="" class="alternatif"><img src="./dessert.png" class="alternatif " alt=""></a></div>
-        <div class="col-4"><a href="" class="alternatif"><img src="./salade.jpg" class="alternatif"></a></div>
-        <div class="col-4"><a href="" class="alternatif"><img src="./burger.jpeg  " class="alternatif" alt=""></a></div>
-    </div>
-    </div>
-    <h3>Alimentation saine et équilibréé</h3>
-   <img src="./design.png" class="design" alt="">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h3>Alimentation saine et équilibréé</h3>
+            <div class="row justify-content-end d-flex">
+                <div class="col-md-1">
+                    <img src="./design.png" class="design" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
   
-</div>
+
 <div class="footer">
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <h4>Inscrivez-vous au CaroVeg</h4>
-            <hr>
-            <p>Donnez-vous la possibilité de decouvrir l'alimentation vegetale e les gateaux cru</p>
-        </div>
-        <div class="col-6">
-            <form action="">
-                <label for="">Prénom</label> <br>
-                    <input type="text" id="prenom"><br><br>
-                <div class="prenom" id="prenomVide"></div>                
-                <label for="">Nom</label><br>
-                <div class="nom" id="nomVide"></div>
-                <input type="text" id="nom"><br>
-               <label for=""><br>
-                Email *</label><br>
-                <input type="text" name="" id="mail">
-                <div class="mail" id="mailVide"></div>
-                <br><br>
-                 <input type="submit"  class="btn-inscription" value="Je m'inscris" id="inscription">
-            </form>
-            <script>
-               
-                let inscription=document.getElementById("inscription");
-                inscription.addEventListener('click', ()=>
-                {
-                
-                       
-
-                   
-                    let nomVide=document.getElementById("nomVide"); 
-                    let prenomVide=document.getElementById("prenomVide");    
-                    let mailVide=document.getElementById("mailVide");    
-                    
-                   
-                    let nom=document.getElementById("nom"); 
-                    let prenom=document.getElementById("prenom");    
-                    let mail=document.getElementById("mail");    
-                        if(nom.value==" ")
-                        {
-                           nomVide.textContent="Inserer votre nom";
-                          
-                        }
-
-                        else if(prenom.value==" ")                    
-                         {
-                                prenomVide.textContent="Inserer votre prenom";
-
-                        }
-                        else(mail.value==" ")
-                        {
-                            mailVide.textContent="Inserer votre e-mail";
-                        }
-                    
-                });
-            </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>Inscrivez-vous au CaroVeg</h4>
+                <hr>
+                <p>Donnez-vous la possibilité de decouvrir l'alimentation vegetale e les gateaux cru</p>
+            </div>
+            <div class="col-6">
+                <form action="">
+                    <div class="contenitore-campi">
+                        <label for="">Prénom</label>
+                        <input type="text" id="prenom">
+                        <div class="prenom validazione" id="prenomVide"></div>                
+                    </div>
+                    <div class="contenitore-campi">
+                        <label for="">Nom</label>
+                        <input type="text" id="nom">
+                        <div id="nomVide" class="validazione"></div>
+                    </div>
+                    <div class="contenitore-campi">
+                        <label for=""> Email *</label>
+                        <input type="text" name="" id="mail">
+                        <div class="mail validazione" id="mailVide"></div>
+                    </div>
+                    <input type="submit"  class="link-btn" value="Je m'inscris" id="inscription">
+                </form>
+            </div>
         </div>
     </div>
 </div>
-</div>
+<script>
+
+    let inscription=document.getElementById("inscription");
+    inscription.addEventListener('click', (e) =>
+    {
+        e.preventDefault();
+        
+
+    
+        let nomVide=document.getElementById("nomVide"); 
+        let prenomVide=document.getElementById("prenomVide");    
+        let mailVide=document.getElementById("mailVide");    
+        
+    
+        let nom=document.getElementById("nom"); 
+        let prenom=document.getElementById("prenom");    
+        let mail=document.getElementById("mail");    
+            if(nom.value=="")
+            {
+                nomVide.textContent="Inserer votre nom";
+            }else{
+                nomVide.textContent="";
+            }
+
+            if(prenom.value=="")                    
+            {
+                prenomVide.textContent="Inserer votre prenom";
+
+            }else{
+                prenomVide.textContent="";
+            }
+
+            if(mail.value=="")
+            {
+                mailVide.textContent="Inserer votre e-mail";
+            }else{
+                mailVide.textContent="";
+            }
+        
+    });
+</script>
 </body>
 </html>

@@ -17,9 +17,7 @@
   padding-top: 20px;
 }
 img {
-  width: 382px;
-  height: 404px;
-  object-fit: cover;
+  max-width: 100%;
 }
 .header h3 {
   text-align: left;
@@ -40,20 +38,7 @@ p {
 .classeur {
   background-color: #bbbbbb;
 }
-
-.btn-cuisine {
-  font-size: smaller;
-  border-radius: 42%;
-  border-style: double;
-  padding: 2%;
-  margin-right: 2%;
-  font-weight: bold;
-  color: rgb(235, 91, 39);
-  background-color: transparent;
-  border-color: #746f6f;
-}
-
-.btn-resto {
+.link-btn{
   font-size: smaller;
   border-radius: 42%;
   border-style: double;
@@ -77,12 +62,18 @@ h3 {
   width: 53px;
 }
 .alternatif {
-  padding: 10px;
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 a {
   text-decoration-line: none;
   color: rgb(235, 91, 39);
 }
+
 a:hover {
   color: #746f6f;
 }
@@ -105,18 +96,23 @@ label {
   background-color: white;
   border-color: rgb(235, 91, 39);
 }
-.btn-resto:hover {
-  content: " ";
+.link-btn:hover {
   color: rgb(235, 91, 39);
   background-color: white;
   border-color: rgb(235, 91, 39);
 }
 
 .design {
-  width: 150px;
-  height: 100px;
-  display: flex;
-  position: relative;
-  left: 1065px;
-  top: -81px;
+  margin-right: 0;
+}
+
+label,input{
+  display: block;
+}
+.contenitore-campi{
+  margin-bottom: 15px;
+}
+.validazione{
+  color: #734646;
+  font-weight: bold;
 }
