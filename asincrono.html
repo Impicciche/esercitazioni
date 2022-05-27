@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <button>Prova</button>
+    <button id="pulsante">Prova</button>
     <p id="testo"></p>
     <script>
       /*  let data = setTimeout(saluta, 500);
@@ -31,19 +31,23 @@
             }
             const clock = setInterval(orario, 1000);
             */
+      const pulsante = document.getElementById("pulsante");
 
-      fetch("cane.png")
-        .then((response) => {
-          return response.blob();
-        })
-
-        .then((creaImagine) => {
-          let oggettoURL = URL.createObjectURL(creaImagine);
-          let k = document.createElement("img");
-
-          img.src = oggettoURL;
-          document.body.appenchild(k);
-        });
+      pulsante.addEventListener("click", (e) => {
+        e.preventDefault();
+        fetch("cane.png")
+          .then((response) => {
+            return response.blob();
+          })
+  
+          .then((creaImagine) => {
+            let oggettoURL = URL.createObjectURL(creaImagine);
+            let k = document.createElement("img");
+  
+            k.src = oggettoURL;
+            document.body.appendChild(k);
+          });
+      });
     </script>
   </body>
 </html>

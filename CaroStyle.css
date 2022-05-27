@@ -1,15 +1,16 @@
 .logo {
   color: rgb(235, 91, 39);
-  margin-top: 24px;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.lien-menu-container {
+  margin-right: 45px;
 }
 .lien-menu li {
-  margin-right: 25px;
-  display: inline-block;
   list-style: none;
-}
-
-ul {
-  margin-right: 243px;
+  display: inline-block;
+  margin-right: 35px;
 }
 .menu {
   display: flex;
@@ -19,6 +20,12 @@ img {
   width: 382px;
   height: 404px;
   object-fit: cover;
+}
+.header h3 {
+  text-align: left;
+}
+.classeur {
+  padding: 0 35px;
 }
 h3 {
   padding-top: 10%;
