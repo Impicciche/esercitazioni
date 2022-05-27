@@ -1,12 +1,15 @@
 .logo {
   color: rgb(235, 91, 39);
-  padding-left: 106px;
+  margin-top: 24px;
 }
-.lien-menu {
-  margin-left: 80%;
-  align-items: center !important;
-  position: relative;
-  right: 41%;
+.lien-menu li {
+  margin-right: 25px;
+  display: inline-block;
+  list-style: none;
+}
+
+ul {
+  margin-right: 243px;
 }
 .menu {
   display: flex;
@@ -61,8 +64,6 @@ h3 {
 .inscription {
   display: flex;
   position: relative;
-  top: -24px;
-  left: 236px;
 }
 .lock {
   height: 24px;

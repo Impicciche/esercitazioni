@@ -10,18 +10,24 @@
     <title>Alimentation vivante</title>
 </head>
 <body>
-        <div class="menu">
-            <div class="logo">CaroVeg</div>
-        <div class="container">
-        <div class="row justify-content-start lien-menu">
-            <a class="col-4" href=""> Crudité</a>
-            <a class="col-4" href="">Recettes</a>
-            <a class="col-4" href="">Nutrition</a>
+            <nav>
+                <div class="container">
+
+        <div class="d-flex justify-content-between">           
+             <div class="logo">CaroVeg</div>
+                     <div class="menu">
+                                <div>
+                                    <ul class="lien-menu">
+           <li> <a class="col-4" href=""> Crudité</a></li>
+           <li> <a class="col-4" href="">Recettes</a></li>
+           <li><a class="col-4" href="">Nutrition</a></li>
+        </ul>
                    </div>
            
             <div class="button  justify-content-end inscription">
                 <div><a href="">Inscription</a></div>
-                    <div class="btn-lock col-4"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
                         fill="currentColor" class="bi bi-person-check lock" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 
                         8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 
@@ -36,6 +42,7 @@
         </div>
     </div>
 </div>
+</nav>
 <div class="header">
     <div class="container">
         <div class="row classeur">
@@ -79,14 +86,53 @@
         <div class="col-6">
             <form action="">
                 <label for="">Prénom</label> <br>
-                    <input type="text"><br><br>
+                    <input type="text" id="prenom"><br><br>
+                <div class="prenom" id="prenomVide"></div>                
                 <label for="">Nom</label><br>
-                <input type="text"><br>
+                <div class="nom" id="nomVide"></div>
+                <input type="text" id="nom"><br>
                <label for=""><br>
                 Email *</label><br>
-                <input type="text" name="" id=""><br><br>
-                <input type="submit"  class="btn-inscription" value="Je m'inscris">
+                <input type="text" name="" id="mail">
+                <div class="mail" id="mailVide"></div>
+                <br><br>
+                 <input type="submit"  class="btn-inscription" value="Je m'inscris" id="inscription">
             </form>
+            <script>
+               
+                let inscription=document.getElementById("inscription");
+                inscription.addEventListener('click', ()=>
+                {
+                
+                       
+
+                   
+                    let nomVide=document.getElementById("nomVide"); 
+                    let prenomVide=document.getElementById("prenomVide");    
+                    let mailVide=document.getElementById("mailVide");    
+                    
+                   
+                    let nom=document.getElementById("nom"); 
+                    let prenom=document.getElementById("prenom");    
+                    let mail=document.getElementById("mail");    
+                        if(nom.value==" ")
+                        {
+                           nomVide.textContent="Inserer votre nom";
+                          
+                        }
+
+                        else if(prenom.value==" ")                    
+                         {
+                                prenomVide.textContent="Inserer votre prenom";
+
+                        }
+                        else(mail.value==" ")
+                        {
+                            mailVide.textContent="Inserer votre e-mail";
+                        }
+                    
+                });
+            </script>
         </div>
     </div>
 </div>
